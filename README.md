@@ -31,3 +31,6 @@ The collapsible element itself
 | renderHeader  |           | Object | true       | One component to be rendered has the header. Here you will get toggle one function to toggle manually and one boolean indicating if it is expanded | (toggle, isExpanded) => <Text>HEADER</Text> |
 | renderContent |           | Object | true       | One component to be rendered has the content.                                                                                                      | () => HEADER                                |
 
+## TODO
+- Animate the while toggling expandable state
+- Add JSDOcs
