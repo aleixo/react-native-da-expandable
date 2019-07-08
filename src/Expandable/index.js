@@ -6,5 +6,6 @@ const Element = withContext(PureElement);
 
 export {
   Element,
-  Container,  
+  PureElement,
+  Container,
 }

@@ -13,6 +13,14 @@ class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Expandable.PureElement
+          style={{
+            marginTop: 10
+          }}
+          namespace="group"
+          renderHeader={() => <View style={{ backgroundColor: 'red', height: 30 }}><Text>ALONE</Text></View>}
+          renderContent={() => <View style={{ backgroundColor: 'blue', height: 60 }}><Text>CONTENT</Text></View>}
+        />
         <Expandable.Container
           onCollapseElement={(namespace) => { console.log('COLLAPSE', namespace) }}
           onExpandElement={(namespace) => { console.log('EXPAND', namespace) }}
