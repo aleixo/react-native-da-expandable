@@ -83,7 +83,7 @@ class Container extends React.Component {
   }
 
   render() {
-    const { elements, footer } = this.props;
+    const { elements, footer, separator } = this.props;
     return (
       <Context.Provider value={this._contextValue()}>
         <FlatList
@@ -91,7 +91,8 @@ class Container extends React.Component {
           data={elements}
           renderItem={child => child.item()}
           keyExtractor={(item, index) => item + index}
-          ListFooterComponent={() => footer}
+          ListFooterComponent={footer}
+          ItemSeparatorComponent={separator}
         />
       </Context.Provider>
     );
@@ -100,6 +101,7 @@ class Container extends React.Component {
 
 Container.defaultProps = {
   footer: null,
+  separator: null,
   style: {}
 }
 

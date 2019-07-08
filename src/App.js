@@ -16,6 +16,8 @@ class App extends React.Component {
         <Expandable.Container
           onCollapseElement={(namespace) => { console.log('COLLAPSE', namespace) }}
           onExpandElement={(namespace) => { console.log('EXPAND', namespace) }}
+          footer={() => <View style={{ backgroundColor: 'yellow', height: 10 }} />}
+          separator={() => <View style={{ backgroundColor: 'pink', height: 5 }} />}
           ref={r => this.r = r}
           elements={[
             () => <Expandable.Element
